@@ -27,14 +27,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'center',
         marginTop: 40,
-        marginBottom: 100,
     
 
     },
     bodyContainer: {
         
         width: 175,
-        height: 250,
+        height: 385,
         backgroundColor: "#ECEFF1",
         paddingVertical: 15,
         borderRadius: 15
@@ -47,9 +46,10 @@ const styles = StyleSheet.create({
         borderRadius: 15,
     },
     textContainer:{
-        marginVertical: 20,
-        width: 150,
-        alignSelf: 'flex-start',
+      marginLeft: 10,
+      marginVertical: 20,
+      width: 150,
+      alignSelf: 'flex-start',
     },
     title:{
         fontSize: 18,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
         color: "#9A9A9B"
     },
     soldOut:{
-      marginTop: 2,
+      marginTop: 5,
       fontSize: 20,
       fontWeight: '600',
       color: "#c20609"
