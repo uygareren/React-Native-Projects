@@ -1,18 +1,42 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
-import React, {useState} from 'react';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
 
 export default function Todos({ todos }) {
+  const [doneTodos, setDoneTodos] = useState([]);
 
-    const [isTouched, setisTouched] = useState(false)
+  const handleTodoDone = (item) => {
+    if (!doneTodos.includes(item)) {
+      setDoneTodos([...doneTodos, item]);
+    } else {
+      setDoneTodos(doneTodos.filter((todo) => todo !== item));
+    }
+  };
+
+  const isTodoDone = (item) => {
+    return doneTodos.includes(item);
+  };
 
   const renderTodoItem = ({ item }) => (
-    <View style={styles.todoItem}>
-      <Text style={styles.todoText}>{item}</Text>
-    </View>
+    <TouchableOpacity
+      style={[
+        styles.todoItem,
+        isTodoDone(item) ? styles.doneTodoItem : null
+      ]}
+      onLongPress={() => handleTodoDone(item)}
+    >
+      <Text
+        style={[
+          styles.todoText,
+          isTodoDone(item) ? styles.doneTodoText : null
+        ]}
+      >
+        {item}
+      </Text>
+    </TouchableOpacity>
   );
 
   if (todos.length === 0) {
-    return null; 
+    return null;
   }
 
   return (
@@ -25,6 +49,8 @@ export default function Todos({ todos }) {
     </View>
   );
 }
+
+
 
 const styles = StyleSheet.create({
   todosContainer: {
@@ -42,5 +68,11 @@ const styles = StyleSheet.create({
   todoText: {
     color: "white",
     fontSize: 16,
-  }
+  },
+  doneTodoItem: {
+    backgroundColor: "#4f6570",
+  },
+  doneTodoText: {
+    textDecorationLine: "line-through",
+  },
 });

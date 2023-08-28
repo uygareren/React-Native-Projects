@@ -11,6 +11,8 @@ export default function TodoInputComponent({ addTodo }) {
     }
   };
 
+  
+
   return (
     <View style={styles.todoInputContainer}>
       <TextInput
