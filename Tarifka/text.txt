@@ -1,7 +1,0 @@
-<FlatList
-        data={data.meals}
-        renderItem={({ item }) => (
-          <Text>{item.strMeal}</Text>
-        )}
-        keyExtractor={(item) => item.idMeal}
-      />

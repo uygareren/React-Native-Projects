@@ -17,7 +17,7 @@ export default function CategoryDetail({ route }) {
   
     useEffect(() => {
       fetchData(CATEGORY_DETAIL_URL);
-    }, [CATEGORY_DETAIL_URL]);
+    }, []);
   
     return (
       <FlatList
