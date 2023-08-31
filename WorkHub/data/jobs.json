@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Yazılım Geliştirici",
+    "location": "İstanbul",
+    "work_style": "Hibrit",
+    "experience_level": "Senior",
+    "description": "Yazılım geliştirme ekibimize katılmak üzere deneyimli bir yazılım geliştirici arıyoruz. Hem Ofis hem de Uzaktan çalışma imkanı sunulmaktadır."
+  },
+  {
+    "id": 2,
+    "title": "Muhasebe Uzmanı",
+    "location": "Ankara",
+    "work_style": "Ofis",
+    "experience_level": "Mid",
+    "description": "Muhasebe departmanımızda görev alacak, en az 5 yıl deneyime sahip muhasebe uzmanı arıyoruz. Sabit Ofis çalışması gerekmektedir."
+  },
+  {
+    "id": 3,
+    "title": "Grafik Tasarımcısı",
+    "location": "İzmir",
+    "work_style": "Uzaktan",
+    "experience_level": "Junior",
+    "description": "Yaratıcı ve yenilikçi grafik tasarımcısı arıyoruz. Tamamen Uzaktan çalışma modeli ile esnek bir iş imkanı sunulmaktadır."
+  },
+  {
+    "id": 4,
+    "title": "Proje Yöneticisi",
+    "location": "Bursa",
+    "work_style": "Hibrit",
+    "experience_level": "Senior",
+    "description": "Kapsamlı projeleri yönetmek üzere deneyimli proje yöneticisi arıyoruz. Hem Ofiste hem de Uzaktan çalışma gerekmektedir."
+  },
+  {
+    "id": 5,
+    "title": "Satış Temsilcisi",
+    "location": "Antalya",
+    "work_style": "Ofis",
+    "experience_level": "Junior",
+    "description": "Enerjik ve iletişim becerileri yüksek satış temsilcisi arıyoruz. Ofis merkezli bir çalışma düzeni bulunmaktadır."
+  },
+  {
+    "id": 6,
+    "title": "Veritabanı Uzmanı",
+    "location": "Eskişehir",
+    "work_style": "Ofis",
+    "experience_level": "Mid",
+    "description": "Veritabanı yönetimi konusunda uzman ve deneyimli bir kişi arıyoruz. Sabit Ofis çalışması gereklidir."
+  },
+  {
+    "id": 7,
+    "title": "İçerik Editörü",
+    "location": "Adana",
+    "work_style": "Uzaktan",
+    "experience_level": "Junior",
+    "description": "Çeşitli konularda içerik üretecek içerik editörleri aranmaktadır. Uzaktan çalışma modeli benimsenmektedir."
+  },
+  {
+    "id": 8,
+    "title": "İnsan Kaynakları Danışmanı",
+    "location": "Gaziantep",
+    "work_style": "Hibrit",
+    "experience_level": "Senior",
+    "description": "İnsan kaynakları süreçlerini yönetecek deneyimli danışman arıyoruz. Hem Ofis hem de Uzaktan çalışma yapılmaktadır."
+  },
+  {
+    "id": 9,
+    "title": "E-ticaret Yöneticisi",
+    "location": "Konya",
+    "work_style": "Ofis",
+    "experience_level": "Mid",
+    "description": "Online satış platformumuzun yönetimi için e-ticaret deneyimine sahip yönetici arıyoruz. Ofis bazlı çalışma gerekmektedir."
+  },
+  {
+    "id": 10,
+    "title": "Frontend Geliştirici",
+    "location": "Trabzon",
+    "work_style": "Hibrit",
+    "experience_level": "Junior",
+    "description": "Kullanıcı dostu web arayüzleri geliştirmek üzere frontend geliştirici arıyoruz. Hem Uzaktan hem de Ofis ortamında çalışma yapılmaktadır."
+  },
+  {
+    "id": 11,
+    "title": "Müşteri Destek Temsilcisi",
+    "location": "Mersin",
+    "work_style": "Ofis",
+    "experience_level": "Junior",
+    "description": "Müşterilere yardımcı olacak müşteri destek temsilcisi aranmaktadır. Sabit Ofis çalışması gereklidir."
+  },
+  {
+    "id": 12,
+    "title": "Veri Analisti",
+    "location": "Diyarbakır",
+    "work_style": "Uzaktan",
+    "experience_level": "Mid",
+    "description": "Veri analizi yapacak deneyimli bir analist arıyoruz. Uzaktan çalışma imkanı sunulmaktadır."
+  },
+  {
+    "id": 13,
+    "title": "Satın Alma Müdürü",
+    "location": "Samsun",
+    "work_style": "Hibrit",
+    "experience_level": "Senior",
+    "description": "Satın alma süreçlerini yönetecek müdür arıyoruz. Hem Ofiste hem de Uzaktan çalışma yapılmaktadır."
+  },
+  {
+    "id": 14,
+    "title": "Sosyal Medya Uzmanı",
+    "location": "Kayseri",
+    "work_style": "Ofis",
+    "experience_level": "Mid",
+    "description": "Sosyal medya hesaplarımızın yönetimi için deneyimli bir uzman arıyoruz. Ofis merkezli çalışma düzeni bulunmaktadır."
+  },
+  {
+    "id": 15,
+    "title": "Ar-Ge Mühendisi",
+    "location": "Eskişehir",
+    "work_style": "Hibrit",
+    "experience_level": "Senior",
+    "description": "Yenilikçi ürünler geliştirmek üzere Ar-Ge mühendisi arıyoruz. Hem Ofis hem de Uzaktan çalışma imkanı"
+  }
+]
