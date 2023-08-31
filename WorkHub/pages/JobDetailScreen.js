@@ -3,11 +3,14 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import jobData from "../data/jobs.json";
+import { useDispatch } from 'react-redux';
+import { addFavoriteId, addSubmittedJobId } from '../redux/Slice';
 
 export default function JobDetailScreen({ route, navigation }) {
   const { id } = route.params;
 
   const [data, setData] = useState([]);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     // Find the job data with the specified id
@@ -35,6 +38,13 @@ export default function JobDetailScreen({ route, navigation }) {
     }
   }, [id, navigation]);
 
+  const handleFavorite = (id) => {
+    dispatch(addFavoriteId({id:id}))
+  }
+  const handleSubmitted = (id) => {
+    dispatch(addSubmittedJobId({id:id}))
+  }
+
 
   return (
     <View>
@@ -57,14 +67,14 @@ export default function JobDetailScreen({ route, navigation }) {
         </View>
 
         <View style={styles.button_container}>
-          <TouchableOpacity style={styles.button_view}>
+          <TouchableOpacity style={styles.button_view} onPress={() => handleSubmitted(data.id)}>
             <View style={styles.button_area}>
               <Ionicons name="exit-outline" size={24} color="white" style={styles.button_icon} />
               <Text style={styles.button_text}>Submit</Text>
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button_view}>
+          <TouchableOpacity style={styles.button_view} onPress={() => handleFavorite(data.id)}>
             <View style={styles.button_area}>
               <AntDesign name="heart" size={24} color="white" style={styles.button_icon} />
               <Text style={styles.button_text}>Favorite Job</Text>
