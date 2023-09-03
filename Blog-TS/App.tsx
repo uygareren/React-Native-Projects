@@ -6,11 +6,14 @@ import HomepageScreen from './pages/HomepageScreen';
 import AddBlogScreen from './pages/AddBlogScreen';
 import BlogDetailScreen from './pages/BlogDetailScreen';
 import { AntDesign } from '@expo/vector-icons';
+import { Provider } from 'react-redux';
+import Store from './redux/Store';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
+    <Provider store={Store}>
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="HomepageScreen" component={HomepageScreen} options={({ navigation }) => ({
@@ -25,6 +28,7 @@ export default function App() {
         <Stack.Screen name='BlogDetailScreen' component={BlogDetailScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
+    </Provider>
   );
 }
 

@@ -1,21 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
-
+import { useState } from 'react';
+import { useDispatch } from 'react-redux'; 
+import { addPost } from '../redux/Slice';
 
 interface AddBlogComponentProps {
 
 }
 
 const AddBlogComponent: React.FC<AddBlogComponentProps> = ({}) => {
+
+    const [titleText, setTitleText] = useState<string>("")
+    const [contentText, setContentText] = useState<string>("")
+
+    const dispatch = useDispatch();
+
+
+    const handleSaveBlog = () => {
+        dispatch(addPost({title: titleText, content: contentText}));
+
+        setTitleText("");
+        setContentText("");
+    }
+
     return (
         <View style = {styles.container}>
             <Text style = {styles.text}>Başlık Giriniz</Text>
-            <TextInput style = {styles.text_ınput}/>
+            <TextInput style = {styles.text_ınput} value={titleText} onChangeText={setTitleText}/>
 
             <Text style = {styles.text}>İçerik Giriniz</Text>
-            <TextInput style = {styles.text_ınput}/>
+            <TextInput style = {styles.text_ınput} value={contentText} onChangeText={setContentText}/>
 
-            <TouchableOpacity style = {styles.button_view}>
+            <TouchableOpacity style = {styles.button_view} onPress={handleSaveBlog}>
                 <Text style = {styles.button_text}>Kaydet</Text>
             </TouchableOpacity>
         </View>
