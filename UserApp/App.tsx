@@ -12,7 +12,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="HomepageScreen" component={HomepageScreen} />
+        <Stack.Screen name="HomepageScreen" component={HomepageScreen} options={{title: "Home Screen", headerTitleAlign: 'center'}} />
         <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>

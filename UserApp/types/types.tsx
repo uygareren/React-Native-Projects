@@ -4,4 +4,6 @@ export interface User {
   email: string;
   avatar: string;
   isOnline: boolean;
+  followers: number,
+  following: number
 }
