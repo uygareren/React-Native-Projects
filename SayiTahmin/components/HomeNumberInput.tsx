@@ -25,8 +25,8 @@ const HomeNumberInput: React.FC<HomeNumberInputProps> = () => {
             alert("Boş olamaz")
         }else if(Number(text) < 0){
             alert("0'dan Küçük olamaz!")
-        }else if(Number(text) > 100){
-            alert("100'den büyük olamaz")
+        }else if(Number(text) > 15){
+            alert("15'ten büyük olamaz")
         }else{
             dispatch(setUserPrediction(Number(text)))
         }
