@@ -1,3 +1,4 @@
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
@@ -9,9 +10,12 @@ interface CategoryCardProps{
 }
 
 const CategoryCard: React.FC<CategoryCardProps> = ({id,title, color}) => {
+
+    const navigation = useNavigation<NavigationProp<any>>()
+
     return (
         <View >
-            <TouchableOpacity style = {[styles.category_card_view, {backgroundColor: color}]}>
+            <TouchableOpacity onPress={() => navigation.navigate("CategoryDetail", {id: id})} style = {[styles.category_card_view, {backgroundColor: color}]}>
                 <Text style = {styles.category_title}>{title}</Text>
             </TouchableOpacity>
         </View>

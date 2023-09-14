@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, FlatList } from 'react-native';
 import {useEffect} from "react"
 import CategoryCard from '../compponents/CategoryCard';
 import {CATEGORIES} from "../data/dummy-data"
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 interface CategoriesScreenProps{
@@ -11,11 +12,11 @@ interface CategoriesScreenProps{
 
 const CategoriesScreen: React.FC<CategoriesScreenProps> = () => {
 
-    // useEffect(() => {
+    useEffect(() => {
       
     
-    //   console.log(CATEGORIES)
-    // }, [])
+      console.log(CATEGORIES)
+    }, [])
     
 
     const renderCategories = ({item}: {item:{id: string ,title: string, color: string}}) => {
@@ -23,20 +24,22 @@ const CategoriesScreen: React.FC<CategoriesScreenProps> = () => {
     }
 
     return (
-        <View style = {styles.container}>
+        <SafeAreaView style = {styles.container}>
             <FlatList
             data={CATEGORIES}
             renderItem={renderCategories}
             keyExtractor={(item) => item.id}
             numColumns={2}
             />
-        </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container:{
         flex: 1,
+        marginTop: 20,
+        backgroundColor: "white"
     }
 })
 
